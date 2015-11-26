@@ -1,0 +1,22 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: auto;
+  width: 80%;
+}
+
+h1 {
+  text-align: center;
+  font-size: 5em;
+  margin: 1%;
+}
+
+.gallery {
+  display: inline-block;
+  text-align: center;
+}
+
+.gallery a {
+  width: 30%;
+  margin: 1%;
+}

@@ -1,5 +1,8 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  div.gallery
+    for image in images
+      a(href=image.id)
+        img(src=image.url, alt='image template for meme ' + image.title)
+
