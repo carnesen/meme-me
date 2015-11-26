@@ -1,14 +1,12 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  margin: auto;
-  width: 80%;
 }
 
 h1 {
   text-align: center;
   font-size: 5em;
   margin: 1%;
+  clear: both;
 }
 
 .gallery {
@@ -16,7 +14,21 @@ h1 {
   text-align: center;
 }
 
-.gallery a {
+.gallery img {
   width: 30%;
   margin: 1%;
+  vertical-align: middle;
+}
+
+.meme-page {
+  text-align: center;
+}
+
+.meme-page img {
+  width: 40%;
+  vertical-align: bottom;
+}
+
+.nav {
+  font-size: 20em;
 }
