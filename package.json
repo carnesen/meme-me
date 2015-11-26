@@ -10,6 +10,22 @@
     "debug": "2.2.0",
     "express": "4.13.1",
     "jade": "1.11.0",
+    "jquery": "2.1.4",
     "morgan": "1.6.1"
+  },
+  "description": "a meme app",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carnesen/meme-me.git"
+  },
+  "author": "Chris Arnesen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/carnesen/meme-me/issues"
+  },
+  "homepage": "https://github.com/carnesen/meme-me#readme",
+  "devDependencies": {
+    "js-yaml": "3.4.5"
   }
 }

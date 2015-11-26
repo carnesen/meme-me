@@ -7,7 +7,7 @@ var path = require('path');
 var images = require('../lib/images');
 
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Meme-Me', images: images });
+  res.render('index', { images: images });
 });
 
 module.exports = router;

@@ -3,7 +3,7 @@ var router = express.Router();
 
 var images = require('../lib/images');
 
-images.forEach(function(image, index, arr) {
+images.forEach(function(image) {
   router.get('/' + image.id, function(req, res) {
     res.render('meme', { image: image });
   });

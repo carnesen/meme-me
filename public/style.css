@@ -6,11 +6,9 @@ h1 {
   text-align: center;
   font-size: 5em;
   margin: 1%;
-  clear: both;
 }
 
 .gallery {
-  display: inline-block;
   text-align: center;
 }
 
@@ -29,6 +27,33 @@ h1 {
   vertical-align: bottom;
 }
 
-.nav {
+/*.left {*/
+  /*float: left;*/
+/*}*/
+
+/*.right {*/
+  /*float: right;*/
+/*}*/
+
+
+.left, .right {
   font-size: 20em;
+}
+
+.meme {
+  position: relative;
+  color: white;
+  text-shadow: 2px 2px #000000;
+  font-size: 1.3em;
+  text-transform: uppercase;
+}
+
+.first {
+  position: absolute;
+  top: 0;
+}
+
+.second {
+  position: absolute;
+  bottom: 0;
 }
