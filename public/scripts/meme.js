@@ -136,7 +136,7 @@ function onReady() {
 }
 
 /**
- * Main program. Fetch the comments _data for this meme using AJAX.
+ * Main program. Fetch the comments data for this meme using AJAX.
  */
 $.ajax({
 
@@ -144,7 +144,7 @@ $.ajax({
 
   success: function(data) {
 
-    // When the _data is received, store it in the "comments" global variable
+    // When the data is received, store it in the "comments" global variable
     comments = data;
 
     // Set index to the most recent comment
