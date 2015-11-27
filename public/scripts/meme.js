@@ -3,33 +3,11 @@
  */
 var commentIndex = Math.floor(Math.random() * 100000);
 var comments = [];
-var SLIDESHOW_DURATION = 8000; // How long a comment is shown for if no click
-var resetCommentTimer; // slide show timer
 
 /**
- * A function for creating resettable interval timers
- * @param duration : Number of milliseconds to wait before invoking the callback
- * @param callback : Function to invoke when duration has expired
- * @returns {reset} : A function that, when invoked, resets the countdown
+ *
+ * @param direction
  */
-function createResettableInterval(callback, duration) {
-
-  var timer;
-
-  var reset = function() {
-    clearTimeout(timer);
-    var onTimeout = function() {
-      callback();
-      reset();
-    };
-    timer = setTimeout(onTimeout, duration);
-  };
-
-  reset();
-
-  return reset;
-}
-
 function render(direction) {
 
   var $first = $('.first');
@@ -75,22 +53,15 @@ function onReady() {
   // render the initial comment
   render(0);
 
-  // set up the slideshow timer
-  resetCommentTimer = createResettableInterval(function() {
-    render(+1);
-  }, SLIDESHOW_DURATION);
-
   // set up click handlers
   $('.right').on('click', function(event) {
     event.preventDefault();
     render(+1);
-    resetCommentTimer();
   });
 
   $('.left').on('click', function(event) {
     event.preventDefault();
     render(-1);
-    resetCommentTimer();
   });
 }
 

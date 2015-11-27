@@ -1,0 +1,9 @@
+.gallery {
+  text-align: center;
+}
+
+.gallery img {
+  width: 30%;
+  margin: 1%;
+  vertical-align: middle;
+}

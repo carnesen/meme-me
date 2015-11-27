@@ -23,7 +23,7 @@ app.use('/', index);
 app.use('/', memes);
 app.use('/api', api);
 
-app.get('/jquery.min.js', function(req, res) {
+app.get('/vendors/jquery.min.js', function(req, res) {
   res.sendFile(path.join(__dirname, 'node_modules', 'jquery', 'dist', 'jquery.min.js'));
 });
 

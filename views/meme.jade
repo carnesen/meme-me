@@ -1,12 +1,14 @@
 extends layout
 
 block content
-  p.meme-page
-    span.left 〈
+  link(rel='stylesheet', href='stylesheets/meme.css')
+  main.meme-page
+    .left 〈
+    .right 〉
     .meme
-      img(src=image.url, alt='image template for meme ' + image.title)
+      img(src=image.url, alt= image.title)
       .first
       .second
-    span.right 〉
-  script(src='jquery.min.js')
-  script(src='meme.js')
+
+  script(src='vendors/jquery.min.js')
+  script(src='scripts/meme.js')

@@ -1,0 +1,51 @@
+/** {*/
+  /*border: dashed 1px;*/
+/*}*/
+
+.meme-page {
+  text-align: center;
+  width: 100%;
+  margin: auto;
+}
+
+img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+
+.left, .right {
+  font-size: 10rem;
+}
+
+.meme {
+  margin: auto;
+  width: 35%;
+  position: relative;
+  color: white;
+  text-shadow: 2px 2px #000000;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+.first {
+  position: absolute;
+  top: 0;
+}
+
+.second {
+  position: absolute;
+  bottom: 2%;
+}
+
+.first, .second {
+  width: 100%;
+}
