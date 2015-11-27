@@ -9,6 +9,9 @@ block content
       img(src=image.url, alt= image.title)
       .first
       .second
-
+    form
+      input(type="text" name="first" placeholder="first line of meme")
+      input(type="text" name="second" placeholder="second line of meme")
+      button(type="submit") Submit
   script(src='vendors/jquery.min.js')
   script(src='scripts/meme.js')

@@ -4,6 +4,8 @@
 var commentIndex = Math.floor(Math.random() * 100000);
 var comments = [];
 
+var COMMENTS_URL = '/api/comments' + window.location.pathname;
+
 /**
  *
  * @param direction
@@ -45,6 +47,28 @@ function render(direction) {
 
 }
 
+function onSubmit(event) {
+
+  event.preventDefault();
+
+  var data = {};
+  $(this).serializeArray().map(function (x) {
+    data[x.name] = x.value;
+  });
+
+  $(this)[0].reset();
+
+  comments.splice(commentIndex, 0, data);
+
+  render(0);
+
+  $.ajax({
+    type: 'POST',
+    url: COMMENTS_URL,
+    data: data
+  });
+}
+
 /**
  * Function invoked when the DOM is ready
  */
@@ -63,6 +87,8 @@ function onReady() {
     event.preventDefault();
     render(-1);
   });
+
+  $('form').on('submit', onSubmit);
 }
 
 /**
@@ -70,7 +96,7 @@ function onReady() {
  * "comments" global variable and render the comment viewer to the DOM.
  */
 $.ajax({
-  url: '/api' + window.location.pathname,
+  url: COMMENTS_URL,
   success: function(data) {
     comments = data;
     $(document).ready(onReady);
