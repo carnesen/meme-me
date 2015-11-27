@@ -3,7 +3,7 @@ var router = express.Router();
 
 var comments = require('../lib/comments');
 
-// This router gets mounted under /api
+// This router gets mounted at /api
 
 router.get('/comments/:id', function(req, res) {
   res.send(comments.read(req.params.id));

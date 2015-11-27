@@ -12,6 +12,55 @@ var $formStatus; // form submission status element
 var $form; // form element for submitting new memes
 
 /**
+ * Main program. Fetch the comments data for this meme using AJAX.
+ */
+$.ajax({
+
+  url: commentsUrl,
+
+  success: function(data) {
+
+    // When the data is received, store it in the "comments" global variable
+    comments = data;
+
+    // Set index to the most recent comment
+    commentIndex = 0;
+
+    // check that the document is ready and when so run the onReady function
+    $(document).ready(onReady);
+  }
+
+});
+
+/**
+ * Function invoked when the DOM is ready
+ */
+function onReady() {
+
+  $first = $('.first');
+  $second = $('.second');
+  $comment = $first.add($second);
+  $formStatus = $('.form-status');
+  $form = $('form');
+
+  // set up click handlers
+  $('.right').on('click', function(event) {
+    event.preventDefault();
+    render(+1);
+  });
+
+  $('.left').on('click', function(event) {
+    event.preventDefault();
+    render(-1);
+  });
+
+  $form.on('submit', onSubmit);
+
+  // render the initial comment
+  render(0);
+}
+
+/**
  * Renders a meme comment to the template image.
  * @param direction +1 animates to the right, -1 for to the left
  */
@@ -106,52 +155,3 @@ function onSubmit(event) {
   });
 
 }
-
-/**
- * Function invoked when the DOM is ready
- */
-function onReady() {
-
-  $first = $('.first');
-  $second = $('.second');
-  $comment = $first.add($second);
-  $formStatus = $('.form-status');
-  $form = $('form');
-
-  // render the initial comment
-  render(0);
-
-  // set up click handlers
-  $('.right').on('click', function(event) {
-    event.preventDefault();
-    render(+1);
-  });
-
-  $('.left').on('click', function(event) {
-    event.preventDefault();
-    render(-1);
-  });
-
-  $form.on('submit', onSubmit);
-}
-
-/**
- * Main program. Fetch the comments data for this meme using AJAX.
- */
-$.ajax({
-
-  url: commentsUrl,
-
-  success: function(data) {
-
-    // When the data is received, store it in the "comments" global variable
-    comments = data;
-
-    // Set index to the most recent comment
-    commentIndex = 0;
-
-    // check that the document is ready and when so run the onReady function
-    $(document).ready(onReady);
-  }
-
-});
