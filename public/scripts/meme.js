@@ -1,7 +1,7 @@
 /**
  * Global state variables
  */
-var commentIndex = Math.floor(Math.random() * 100000);
+var commentIndex;
 var comments = [];
 
 var COMMENTS_URL = '/api/comments' + window.location.pathname;
@@ -15,7 +15,9 @@ function render(direction) {
   var $first = $('.first');
   var $second = $('.second');
   var $both = $first.add($second);
+  var $formStatus = $('.form-status');
 
+  $formStatus.html('');
   // Use modulo (%) to make sure index stays between 0 and comments.length - 1.
   commentIndex = (commentIndex + direction + comments.length) % comments.length;
 
@@ -27,7 +29,7 @@ function render(direction) {
     $both.css({
       left: direction * 1000 + 'px'
     });
-    // set it's content to the new comment
+    // set its content to the new comment
     $first.html(comment.first);
     $second.html(comment.second);
     // animate it back in to center
@@ -56,17 +58,30 @@ function onSubmit(event) {
     data[x.name] = x.value;
   });
 
-  $(this)[0].reset();
+  var $formStatus = $('.form-status');
 
-  comments.splice(commentIndex, 0, data);
+  if(!(data.first && data.second)) {
+    $formStatus.html('Both fields are required');
+    return;
+  }
 
-  render(0);
+  var $form = $(this);
 
   $.ajax({
     type: 'POST',
     url: COMMENTS_URL,
-    data: data
+    data: data,
+    success: function() {
+      $form[0].reset();
+      comments.splice(commentIndex, 0, data);
+      render(0);
+      $formStatus.html('Submitted!');
+    },
+    error: function(e) {
+      $formStatus.html(e.responseText);
+    }
   });
+
 }
 
 /**
@@ -99,6 +114,7 @@ $.ajax({
   url: COMMENTS_URL,
   success: function(data) {
     comments = data;
+    commentIndex = 0;
     $(document).ready(onReady);
   }
 });
