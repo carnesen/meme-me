@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/carnesen/meme-me/issues"
   },
-  "homepage": "https://github.com/carnesen/meme-me#readme"
+  "homepage": "https://github.com/carnesen/meme-me#readme",
+  "devDependencies": {
+    "blueimp-file-upload": "9.11.2"
+  }
 }
