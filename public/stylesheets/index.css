@@ -10,10 +10,11 @@ img {
   width: 30%;
   margin: 1%;
   vertical-align: middle;
-  transition: all 0.5s 0s;
+  transition: 0.5s 0s;
+  border-radius: 2%;
 }
 
 img:hover {
   width: 31%;
-  transition: all 0.5s 0s;
+  transition: 0.5s 0s;
 }

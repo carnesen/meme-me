@@ -4,6 +4,19 @@
 
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: black;
+}
+
+.page {
+  width: 90%;
+  background-color: #102c10;
+  border-radius: 1%;
+  margin: auto;
+}
+
+.meme-text {
+  color: #dbdbdb;
+  text-shadow: 2px 2px #000000;
 }
 
 h1 {
