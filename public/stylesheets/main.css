@@ -9,23 +9,11 @@ body {
 
 .page {
   width: 90%;
-  background-image: url('/paisley.png');
+  background-image: url('/images/paisley.png');
   border-radius: 1%;
-  margin: auto;
+  margin: 2% auto;
 }
 
-.meme-text {
-  color: #dbdbdb;
-  text-shadow: 2px 2px #000000;
-}
-
-h1 {
-  text-align: center;
-  font-size: 5em;
-  margin: 1%;
-}
-
-a {
-  text-decoration: none;
-  color: black;
+.inner {
+  padding: 3%;
 }

@@ -34,6 +34,8 @@ img {
   position: relative;
   font-size: 1.3rem;
   text-transform: uppercase;
+  color: #fafafa;
+  text-shadow: 2px 2px #000000;
 }
 
 .first {
@@ -54,4 +56,8 @@ input {
   padding: 1%;
   margin: 1% auto;
   display: block;
+}
+
+button {
+  padding: 1%;
 }
