@@ -15,7 +15,7 @@ router.post('/comments/:id', function(req, res) {
 
   // Check if data is valid before writing to database
   if(comment.first && comment.second) {
-    res.send(200);
+    res.sendStatus(200);
     comments.write(req.params.id, comment);
     return;
   }
