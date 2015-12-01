@@ -48,3 +48,9 @@ img {
 .first, .second {
   width: 100%;
 }
+
+input {
+  padding: 1%;
+  margin: 1% auto;
+  display: block;
+}

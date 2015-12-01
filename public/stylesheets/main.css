@@ -9,7 +9,7 @@ body {
 
 .page {
   width: 90%;
-  background-color: #102c10;
+  background-image: url('/paisley.png');
   border-radius: 1%;
   margin: auto;
 }
