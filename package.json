@@ -1,8 +1,12 @@
 {
-  "name": "meme-me",
-  "version": "0.0.1",
+  "name": "@carnesen/meme-me",
+  "description": "A toy app I made for coding bootcamp",
+  "main": "app.js",
+  "version": "0.0.0-0",
+  "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "test": "echo 'No tests :('"
   },
   "dependencies": {
     "body-parser": "1.18.3",
@@ -14,8 +18,6 @@
     "morgan": "1.9.1",
     "pug": "2.0.3"
   },
-  "description": "a meme app",
-  "main": "app.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/carnesen/meme-me.git"
