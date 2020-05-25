@@ -1,12 +1,12 @@
 {
   "name": "@carnesen/meme-me",
-  "description": "A toy app I made for coding bootcamp",
+  "description": "A toy app I made for coding boot camp",
   "main": "app.js",
   "version": "0.0.0-0",
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "test": "echo 'No tests :('"
+    "test": "./test.sh"
   },
   "dependencies": {
     "body-parser": "1.18.3",
