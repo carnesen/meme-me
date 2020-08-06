@@ -2,7 +2,7 @@
   "name": "@carnesen/meme-me",
   "description": "A toy app I made for coding boot camp",
   "main": "app.js",
-  "version": "2020.5.0",
+  "version": "0.0.0-0",
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
