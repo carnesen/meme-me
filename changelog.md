@@ -1,6 +1,10 @@
-# `@carnesen/meme-me` change log
+# **@carnesen/meme-me** changelog
 
-## [UNRELEASED]
+## Upcoming
+
+- Upgrade dependencies
+- Upgrade to Node.js 16
+
 ## 2020.5.0
 ### Breaking
 Drop support for Node.js 8
